@@ -6,23 +6,47 @@
         <title>Kindebook</title>
     </head>
     <body>
-	<style>
-		.loader{
-			text-align:center;
-			width:100%;
-		}
-	</style>
+<style type="text/css">
+body,html{
+height:100%; /*Siempre es necesario cuando trabajamos con alturas*/
+}
+ #inferior{
+color: #FFF;
+background: #1ab394;
+position:absolute; /*El div será ubicado con relación a la pantalla*/
+left:0px; /*A la derecha deje un espacio de 0px*/
+right:0px; /*A la izquierda deje un espacio de 0px*/
+bottom:0px; /*Abajo deje un espacio de 0px*/
+height:80px; /*alto del div*/
+z-index:0;
+ }
  
-<div class="loader">
-<img src="http://50.21.186.193:8086/Login/school.png" style=" width: 100%; margin-bottom: 100px;  margin-top: 80px;" />
-<img src="loading.gif" style="width:214px">
-</div>
+  #superior{
+color: #FFF;
+background: #1ab394;
+position:absolute; /*El div será ubicado con relación a la pantalla*/
+left:0px; /*A la derecha deje un espacio de 0px*/
+right:0px; /*A la izquierda deje un espacio de 0px*/
+height:80px; /*alto del div*/
+z-index:0;
+top: 1px;
+ }
+</style>
+ 
+
 	  
- <iframe src="http://50.21.186.193:8086/Login/" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe> 
+
 	  
 	  
-	  
-	  
+	  <div id="inferior">&nbsp;</div>
+	  <div style="text-align:center">
+		<img src="school.png" style="width:100%;margin-top: 100px;" />
+		<br>
+		<img src="rubix-loader.gif"  style="width:200px; margin-top: 50px;" />
+	  </div>
+	  <div id="superior">&nbsp;</div>
+	  <iframe src="http://50.21.186.193:8086/Login/" 
+style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe> 
         <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
