@@ -6,47 +6,81 @@
         <title>Kindebook</title>
     </head>
     <body>
+	
+	
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	
+	
 <style type="text/css">
 body,html{
 height:100%; /*Siempre es necesario cuando trabajamos con alturas*/
 }
  #inferior{
-color: #FFF;
-background: #1ab394;
-position:absolute; /*El div será ubicado con relación a la pantalla*/
-left:0px; /*A la derecha deje un espacio de 0px*/
-right:0px; /*A la izquierda deje un espacio de 0px*/
-bottom:0px; /*Abajo deje un espacio de 0px*/
-height:80px; /*alto del div*/
-z-index:0;
+    color: #FFF;
+    background: #ed5565;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 50px;
+    z-index: 0;
  }
  
   #superior{
-color: #FFF;
-background: #1ab394;
-position:absolute; /*El div será ubicado con relación a la pantalla*/
-left:0px; /*A la derecha deje un espacio de 0px*/
-right:0px; /*A la izquierda deje un espacio de 0px*/
-height:80px; /*alto del div*/
-z-index:0;
-top: 1px;
+    color: #FFF;
+    background: #1ab394;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    z-index: 0;
+    top: -1px;
  }
+ 
+ .contenedorprincipal{
+ position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;
+ }
+ 
 </style>
  
 
-	  
-
-	  
-	  
-	  <div id="inferior">&nbsp;</div>
+	  <div id="cartago">
+ 
+			  <div id="inferior">&nbsp;</div>
 	  <div style="text-align:center">
-		<img src="school.png" style="width:100%;margin-top: 100px;" />
+		<img src="school.png" style="width:75%;margin-top: 100px;" />
 		<br>
-		<img src="rubix-loader.gif"  style="width:200px; margin-top: 50px;" />
+		<img src="cargador.gif"  style="width:200px; margin-top: 50px;" />
 	  </div>
 	  <div id="superior">&nbsp;</div>
-	  <iframe src="http://50.21.186.193:8086/Login/" 
-style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe> 
-        <script type="text/javascript" src="cordova.js"></script>
+ 
+	  
+</div>
+	  
+	  
+	  
+		<script>
+		
+		setTimeout(function() {
+			$('#cartago').fadeOut(2000);
+		}, 5000);
+		
+				 setTimeout(function() {
+						
+						$('#corpse').fadeIn(2000);
+						//document.getElementById('corpse').style.display = 'block';
+						//document.getElementById('cartago').style.display = 'none';
+					}, 7000);
+		</script>
+	  
+
+	  <iframe id="corpse" class="contenedorprincipal" style="display:none" src="http://50.21.186.193:8086/Login/"></iframe> 
+     
+		
+		
+		<script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
