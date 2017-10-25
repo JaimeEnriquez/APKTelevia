@@ -1,17 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Kindebook</name>
+    <name>
+	    Televip
+    </name>
     <description>
-        Kindebook
+        Televip
     </description>
-    <author email="juanma@bitrain.mx" href="https://www.bitrain.mx/">
-        Juan Manuel Martínez Arelio
+    <author email="a@televia.com" href="https://www.tv.com/">
+        Brickloyalty
     </author>
     <content src="index.html" />
     <access origin="*" />
-	<access origin="http://50.21.186.193:8086/" />
-	<allow-navigation href="http://50.21.186.193:8086/*" />
-	
+	<access origin="http://97.74.238.180:8072/" />
+	<allow-navigation href="http://97.74.238.180:8072//*" />
 	<plugin name="cordova-plugin-whitelist" version="1"/>
 <allow-intent href="http://*/*"/>
 <allow-intent href="https://*/*"/>
@@ -20,19 +21,15 @@
 <allow-intent href="mailto:*"/>
 <allow-intent href="geo:*"/>
 <platform name="android">
-    <allow-intent href="market:*"/>
-	
-	        
-	
-	
+<allow-intent href="market:*"/>
 </platform>
 
-<icon src="KB.png" platform="android" qualifier="ldpi" />
-<icon src="KB.png" platform="android" qualifier="mdpi" />
-<icon src="KB.png" platform="android" qualifier="hdpi" />
-<icon src="KB.png" platform="android" qualifier="xhdpi" />
-<icon src="KB.png" platform="android" qualifier="xxhdpi" />
-<icon src="KB.png" platform="android" qualifier="fr-xxhdpi" />
+<icon src="TV.png" platform="android" qualifier="ldpi" />
+<icon src="TV.png" platform="android" qualifier="mdpi" />
+<icon src="TV.png" platform="android" qualifier="hdpi" />
+<icon src="TV.png" platform="android" qualifier="xhdpi" />
+<icon src="TV.png" platform="android" qualifier="xxhdpi" />
+<icon src="TV.png" platform="android" qualifier="fr-xxhdpi" />
 
 
 <platform name="ios">
