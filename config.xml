@@ -31,6 +31,9 @@
 <icon src="TV.png" platform="android" qualifier="xxhdpi" />
 <icon src="TV.png" platform="android" qualifier="fr-xxhdpi" />
 
+<feature name="NetworkStatus">
+    <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+</feature>
 
 <platform name="ios">
     <allow-intent href="itms:*"/>
