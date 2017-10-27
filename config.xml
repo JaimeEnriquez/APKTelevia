@@ -35,7 +35,6 @@
     <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
 </feature>
 	
-xmlns:android="http://schemas.android.com/apk/res/android"
 <platform name="android">
     <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
