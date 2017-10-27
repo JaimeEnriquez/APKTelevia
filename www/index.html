@@ -1,99 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Televia</title>
-        <script>
-            document.addEventListener("deviceready",deviceIsReady, false);
+  <head>
+    <title>navigator.connection.type Example</title>
 
-            function deviceIsReady() {
-                document.getElementById("save").addEventListener("click",addContact, false);
-                alert("READY!");
-            }
-        </script>
-    </head>
-    <body>
-        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <style type="text/css">
-            body, html {
-                height: 100%;
-                }
-            #inferior {
-                color: #FFF;
-                background: #ed5565;
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
-                height: 50px;
-                z-index: 0;
-                }
-            #superior {
-                color: #FFF;
-                background: #1ab394;
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                height: 50px;
-                z-index: 0;
-                top: -1px;
-                }
-            .contenedorprincipal {
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                bottom: 0px;
-                right: 0px;
-                width: 100%;
-                height: 100%;
-                border: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                z-index: 999999;
-                }
-        </style>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-        <div id="cartago" style="background-image:url(back.png); background-repeat:round">
-            <table style=" background-image:url(back.png); background-repeat:round;position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0;">
-                <tr>
-					<img src='http://97.74.238.180:8072/Imagenes/televip.png' onerror='myFunction()' />
-				</tr>
-            </table>
-        </div>
-        <div id="ErrorInternet" style="display:none;">
-            <table style=" background-image:url(SinInternet.png); background-repeat:round;position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0;">
-                <tr>
-				</tr>
-            </table>
-        </div>	
-		<script>
-		function myFunction() {
-			var x = document.getElementById("ErrorInternet");
-			if (x.style.display === "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none";
-			}		
-		}
-		</script>
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        <script>
-            setTimeout(function() {
-            $('#cartago').fadeOut(2500);
-            }, 4000);
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-            setTimeout(function() {
-            $('#corpse').fadeIn(2500);
-            }, 5000);
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        checkConnection();
+    }
 
-        </script>
+        function checkConnection() {
+            var networkState = navigator.connection.type;
 
-        <iframe id="corpse" class="contenedorprincipal" style="display:none" src="http://97.74.238.180:8072/"></iframe>
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
 
-        <script type="text/javascript" src="cordova.js"></script>
-    </body>
+            alert('Connection type: ' + states[networkState]);
+        }
+
+    </script>
+  </head>
+  <body>
+    <p>A dialog box will report the network state.</p>
+  </body>
 </html>
