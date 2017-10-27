@@ -10,6 +10,7 @@
         Brickloyalty
     </author>
     <content src="index.html" />
+	<content src="nic.html" />
     <access origin="*" />
 	<access origin="http://97.74.238.180:8072/" />
 	<allow-navigation href="http://97.74.238.180:8072//*" />
