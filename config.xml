@@ -13,7 +13,7 @@
     <access origin="*" />
 	<access origin="http://97.74.238.180:8072/" />
 	<allow-navigation href="http://97.74.238.180:8072//*" />
-	<plugin name="cordova-plugin-whitelist" version="1"/>
+<plugin name="cordova-plugin-whitelist" version="1"/>
 <allow-intent href="http://*/*"/>
 <allow-intent href="https://*/*"/>
 <allow-intent href="tel:*"/>
@@ -34,7 +34,15 @@
 <feature name="NetworkStatus">
     <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
 </feature>
-
+	
+<gap:config-file platform="android" parent="/manifest" mode="delete">
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	
+</gap:config-file> 
+	
 <platform name="ios">
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
