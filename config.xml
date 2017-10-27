@@ -35,13 +35,12 @@
     <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
 </feature>
 	
-<gap:config-file platform="android" parent="/manifest" mode="delete">
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	
-</gap:config-file> 
+xmlns:android="http://schemas.android.com/apk/res/android"
+<platform name="android">
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </config-file>
+</platform>	
 	
 <platform name="ios">
     <allow-intent href="itms:*"/>
