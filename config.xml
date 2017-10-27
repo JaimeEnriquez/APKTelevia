@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>
-	    Televip-Un paso adelante.
+	    Televip
     </name>
     <description>
         Televip
@@ -13,7 +13,7 @@
     <access origin="*" />
 	<access origin="http://97.74.238.180:8072/" />
 	<allow-navigation href="http://97.74.238.180:8072//*" />
-<plugin name="cordova-plugin-whitelist" version="1"/>
+	<plugin name="cordova-plugin-whitelist" version="1"/>
 <allow-intent href="http://*/*"/>
 <allow-intent href="https://*/*"/>
 <allow-intent href="tel:*"/>
@@ -34,13 +34,11 @@
 <feature name="NetworkStatus">
     <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
 </feature>
-	
-<platform name="android">
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    </config-file>
-</platform>	
-	
+
+<platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
+</platform>
 
 
 </widget>
