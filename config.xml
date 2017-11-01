@@ -11,8 +11,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-	<access origin="http://97.74.238.180:8072/" />
-	<allow-navigation href="http://97.74.238.180:8072//*" />
+	<access origin="http://televip.mx/" />
+	<allow-navigation href="http://televip.mx/*" />
 	<plugin name="cordova-plugin-whitelist" version="1"/>
 <allow-intent href="http://*/*"/>
 <allow-intent href="https://*/*"/>
