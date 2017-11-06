@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Kindebook</name>
+<widget id="PuntosTeleVIP" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Puntos TeleVIP</name>
     <description>
-        Kindebook
+        Puntos TeleVIP
     </description>
-    <author email="juanma@bitrain.mx" href="https://www.bitrain.mx/">
-        Juan Manuel Martínez Arelio
+    <author email="a@brickloyalty.mx" href="https://brickloyalty.mx/">
+        brickloyalty.com
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <access origin="http://50.21.186.193:8086/" />
-    <allow-navigation href="http://50.21.186.193:8086/*" />
+    <access origin="http://0.0.0.0:8086/" />
+    <allow-navigation href="http://0.0.0.0:8086/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
