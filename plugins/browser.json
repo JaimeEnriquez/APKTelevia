@@ -8,7 +8,7 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "PuntosTeleVIP"
+            "PACKAGE_NAME": "com.KSD.PuntosTeleVIP"
         }
     },
     "dependent_plugins": {}
